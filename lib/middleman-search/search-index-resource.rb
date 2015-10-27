@@ -19,7 +19,7 @@ module Middleman
         path
       end
 
-      def render
+      def render(opts={}, locs={})
         # Build js context
         context = V8::Context.new
         context.load(File.expand_path('../../../vendor/assets/javascripts/lunr.min.js', __FILE__))
